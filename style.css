@@ -1933,3 +1933,46 @@ body.light-mode .memories-section .section-heading h2 {
 #nextLineBtn[hidden] {
     display: none !important;
 }
+@media (max-width: 600px) {
+    .memory-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 170px 170px;
+        gap: 10px;
+    }
+
+    .memory-card {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .memory-card-large {
+        top: 33px;
+        grid-column: 1;
+        grid-row: 1 / 3;
+        height: 280px;
+        align-self: start;
+    }
+
+    .memory-card:not(.memory-card-large) {
+        grid-column: 2;
+    }
+
+    .memory-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .memory-card figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 11px;
+        padding: 8px 5px;
+    }
+}
